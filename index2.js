@@ -123,4 +123,9 @@ while (i<6) {
     i++;
 }
 
+arr.pop();
+document.write("<br>",arr);
+arr.push("aman");
+document.write("<br>",arr);
+
 
