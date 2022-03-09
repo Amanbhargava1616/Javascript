@@ -43,3 +43,25 @@ console.log(elem);
 
 let elem2 =document.getElementById('para');
 console.log(elem2)
+
+let button=document.getElementById('button');
+button.innerHTML = "hi there let me call you mine";
+button.style.background ="black";
+button.style.color ="white";
+button.style.borderRadius ="10px";
+
+document.write("<br>",button.innerText);
+document.write("<br>",button.innerHTML);
+
+let new_ele=document.createElement('div');
+new_ele.innerHTML="new div";
+new_ele.style.background="darkgrey"
+new_ele.style.color="white"
+
+para=document.getElementById('para');
+para.appendChild(new_ele);
+
+new_span=document.createElement('span');
+new_span.innerHTML="<br>This is span";
+para.replaceChild(new_span,new_ele);
+
