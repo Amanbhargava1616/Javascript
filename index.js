@@ -65,3 +65,48 @@ new_span=document.createElement('span');
 new_span.innerHTML="<br>This is span";
 para.replaceChild(new_span,new_ele);
 
+
+function clicked() {
+    para.innerHTML="Button 1 was clicked";               // <element onclick=" clicked() ">...</element>
+}
+
+button.onclick=function()
+{
+    para.innerHTML="Button was clicked";
+}
+
+para.addEventListener('mouseover',function()
+{
+    console.log("loged");
+});
+
+logkaro=()=>
+{
+    console.log("loged kro");
+}
+
+
+ob={
+    f_name: "Aman",
+    l_name: "Bhargava",
+    age: 34,
+    sec: 'A'
+};
+
+let jso=JSON.stringify(ob);
+console.log(jso);
+
+let parso=JSON.parse('{"f_name":"Aman","l_name":"Bhargava","age":34,"sec":"A"}');
+console.log(parso);
+
+
+setInterval(function () {
+    let newdate=new Date();
+    document.getElementById('clock').innerHTML="<br>"+newdate.toLocaleTimeString()+" on date "+newdate.toDateString();
+},1000);
+
+
+
+
+
+
