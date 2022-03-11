@@ -106,6 +106,8 @@ setInterval(function () {
 },1000);
 
 
+document.write("\naman bhargava here \n this is smart guy");
+
 
 
 
