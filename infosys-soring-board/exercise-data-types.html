@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Details</title>
+    <style>
+        div#maincontent {
+            height: 100px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: left;
+            color: #08438E;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+        div#heading {
+            text-decoration: bold;
+            text-align: center;
+            margin-top: 80px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: center;
+            color: #08438E;
+            background-color: #CEE2FA;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+        <div id="heading">Movie Details</div>
+        <div id="maincontent">
+            <script>
+
+                let movie={
+                    name:"Twilight",
+                    rating:4.5,
+                    lang:"English"
+                };
+
+                document.write("Movie: ",movie.name,"<br>");
+                document.write("Language: ",movie.lang,"<br>");
+                document.write("Rating: ",movie.rating,"<br>");
+            </script>
+        </div>
+</body>
+</html>
