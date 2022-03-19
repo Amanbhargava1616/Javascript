@@ -1,49 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Booking Summary</title>
-    <style>
-        div#maincontent {
-            height: 250px;
-            width: 500px;
-            border: 1px solid #CEE2FA;
-            text-align: left;
-            color: #08438E;
-            font-family: calibri;
-            font-size: 20;
-            padding: 5px;
-        }
-        div#heading {
-            text-decoration: bold;
-            text-align: center;
-            margin-top: 80px;
-            width: 500px;
-            border: 1px solid #CEE2FA;
-            text-align: center;
-            color: #08438E;
-            background-color: #CEE2FA;
-            font-family: calibri;
-            font-size: 20;
-            padding: 5px;
-        }
-        h2 {
-            padding: 0;
-            margin: 0;
-        }
-    </style>
-</head>
- 
-<body>
-    <center>
-        <div id="heading">
-            <h2>Booking Summary</h2>
-        </div>
-        <div id="maincontent">
-            <script>
-                //Write the code to display the booking summary
-            </script>
-        </div>
-    </center>
-</body>
- 
+	<head>
+		<title>Booking Summary</title>
+		<style>
+			div#maincontent {
+				min-height: 250px;	
+				width: 500px;
+				border: 1px solid #cee2fa;
+				text-align: left;
+				color: #08438e;
+				font-family: calibri;
+				font-size: 20;
+				padding: 5px;
+			}
+			div#heading {
+				text-decoration: bold;
+				text-align: center;
+				margin-top: 80px;
+				width: 500px;
+				border: 1px solid #cee2fa;
+				text-align: center;
+				color: #08438e;
+				background-color: #cee2fa;
+				font-family: calibri;
+				font-size: 20;
+				padding: 5px;
+			}
+			h2 {
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<div id="heading">
+				<h2>Booking Summary</h2>
+			</div>
+			<div id="maincontent">
+				<script>
+					//Write the code to display the booking summary
+					let seats = prompt("Please enter the number of seats : ");
+
+					let maincontent = document.getElementById("maincontent");
+					var para = document.createElement("p");
+
+					let para1 = (maincontent.appendChild(para).innerText =
+						"Actual cost per ticket :$9\n");
+
+					var para = document.createElement("p");
+					let para2 = maincontent.appendChild(para);
+					if (seats >= 6) {
+						var if_text = "For " + seats + " booking is not allowed\n";
+						para2.innerHTML = if_text;
+					} else {
+						var if_text = seats + " are eligible for festive discounts\n";
+						para2.innerHTML = if_text;
+						var dis_per = 5;
+
+						for (let i = 1; i <= seats; i++) {
+							var para = document.createElement("p");
+							repara = "para".concat(String(i));
+							repara = maincontent.appendChild(para);
+							repara.innerHTML = dis_per + "% discount! on Ticket " + i;
+							dis_per += 2;
+						}
+						dis_per -= 2;
+					}
+
+					var total_price = seats * 9;
+					var final_price = total_price * (1 - dis_per * 0.01);
+					var para = document.createElement("p");
+					let pr_para = maincontent.appendChild(para);
+					pr_para.innerHTML = "Amount payable: $" + final_price;
+				</script>
+			</div>
+		</center>
+	</body>
 </html>
